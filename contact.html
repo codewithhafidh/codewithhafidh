@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Hafidh Omar – Web Developer. Get in touch for web design, development, and maintenance services.">
+    <meta name="author" content="Hafidh Omar">
+    <title>Hafidh | Contact Me</title>
+    <link rel="icon" type="image/x-icon" href="photo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="page-loader">
+        <div class="loader-inner"></div>
+    </div>
+
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><b>Home</b></a></li>
+                    <li><a href="work.html"><b>Portfolio</b></a></li>
+                    <li><a href="contact.html" class="nav-cta"><b>Contact Me</b></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="contact-hero">
+        <div>
+            <h1>Get In <span>Touch</span></h1>
+            <p>Have a project? Let's talk and bring your idea to life.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+
+        <!-- Info Panel -->
+        <div class="contact-info">
+            <div class="availability">Available for Work</div>
+            <h2>Let's Connect</h2>
+            <p>I'm open to freelance projects, collaborations, and web development work. Feel free to reach out!</p>
+
+            <div class="info-item">
+                <div class="info-icon">📧</div>
+                <div class="info-text">
+                    <h4>Email</h4>
+                    <a href="mailto:hafidhomar167@gmail.com">hafidhomar167@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">📞</div>
+                <div class="info-text">
+                    <h4>Phone / WhatsApp</h4>
+                    <a href="https://wa.me/255658502920" target="_blank">+255 658 502 920</a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div class="info-text">
+                    <h4>Location</h4>
+                    <p>Tanzania 🇹🇿</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">⏱️</div>
+                <div class="info-text">
+                    <h4>Response Time</h4>
+                    <p>Usually within 24 hours</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://wa.me/255658502920" class="social-link" target="_blank" title="WhatsApp">💬</a>
+                <a href="mailto:hafidhomar167@gmail.com" class="social-link" title="Email">✉️</a>
+                <a href="#" class="social-link" title="LinkedIn">🔗</a>
+                <a href="#" class="social-link" title="GitHub">🐙</a>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap">
+            <h2>Send a Message</h2>
+            <p>Fill in the form below and I'll get back to you as soon as possible.</p>
+
+            <form id="contact-form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name <span>*</span></label>
+                        <input type="text" id="name" class="form-control" placeholder="e.g. Ahmed Hassan" required>
+                        <div class="error-msg" id="name-error">Please enter your name.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address <span>*</span></label>
+                        <input type="email" id="email" class="form-control" placeholder="your@email.com" required>
+                        <div class="error-msg" id="email-error">Please enter a valid email.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone / WhatsApp</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="+255 xxx xxx xxx">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service Needed <span>*</span></label>
+                    <select id="service" class="form-control" required>
+                        <option value="" disabled selected>-- Select a Service --</option>
+                        <option value="web-design">Website Design & Development</option>
+                        <option value="landing-page">Landing Page</option>
+                        <option value="ui-ux">UI/UX Design</option>
+                        <option value="maintenance">Website Maintenance</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="error-msg" id="service-error">Please select a service.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message <span>*</span></label>
+                    <textarea id="message" class="form-control" placeholder="Tell me about your project, goals, and timeline..." required></textarea>
+                    <div class="error-msg" id="message-error">Please enter a message.</div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-btn">
+                    ✉️ &nbsp; Send Message
+                </button>
+
+                <div class="success-msg" id="success-msg">
+                    ✅ &nbsp; Thank you! Your message has been sent. I'll reply soon.
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Hafidh Portfolio</h3>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="work.html">My Work</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
+            <div class="logo">
+                <img src="photo.jpg" style="width:120px;height:120px;object-fit:cover;border-radius:50%;border:5px solid #00d4ff;box-shadow:0 0 30px rgba(0,212,255,0.5);">
+            </div>
+            <div class="footer-contact">
+                <p>Email: hafidhomar167@gmail.com</p>
+                <p>Phone: +255 658 502 920</p>
+            </div>
+            <p class="copyright">© 2026 Hafidh. All Rights Reserved.</p>
+        </div>
+        <a href="https://wa.me/255658502920" class="whatsapp-float" target="_blank">
+            <img src="photo3.png" alt="WhatsApp">
+        </a>
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="main.js"></script>
+    <script>
+        // ============================================================
+        // BADILISHA hizi 3 na values zako halisi kutoka emailjs.com
+        // ============================================================
+        const EMAILJS_PUBLIC_KEY  = 'vRrgWWzTDAlu4NOgV';    // Account > API Keys
+        const EMAILJS_SERVICE_ID  = 'service_nec6rt7';  // Email Services
+        const EMAILJS_TEMPLATE_ID = 'template_hq2rit1';   // Email Templates
+        // ============================================================
+
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+
+        const form       = document.getElementById('contact-form');
+        const submitBtn  = document.getElementById('submit-btn');
+        const successMsg = document.getElementById('success-msg');
+
+        // Validation helper
+        function validate(id, errorId, condition) {
+            const field = document.getElementById(id);
+            const error = document.getElementById(errorId);
+            if (!condition(field.value)) {
+                field.classList.add('error');
+                error.classList.add('show');
+                return false;
+            }
+            field.classList.remove('error');
+            error.classList.remove('show');
+            return true;
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Validate all fields
+            const validName    = validate('name',    'name-error',    v => v.trim().length >= 2);
+            const validEmail   = validate('email',   'email-error',   v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+            const validService = validate('service', 'service-error', v => v !== '');
+            const validMsg     = validate('message', 'message-error', v => v.trim().length >= 10);
+
+            if (!(validName && validEmail && validService && validMsg)) return;
+
+            // Show loading state
+            submitBtn.classList.add('loading');
+            submitBtn.textContent = '⏳  Sending...';
+            successMsg.classList.remove('show');
+
+            // Collect form data — names zinaoanisha na template variables zako
+            const templateParams = {
+                from_name : document.getElementById('name').value.trim(),
+                from_email: document.getElementById('email').value.trim(),
+                phone     : document.getElementById('phone').value.trim() || 'Not provided',
+                service   : document.getElementById('service').value,
+                message   : document.getElementById('message').value.trim(),
+            };
+
+            // Send via EmailJS
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+                .then(function() {
+                    // SUCCESS
+                    submitBtn.classList.remove('loading');
+                    submitBtn.textContent = '✉️  Send Message';
+                    successMsg.textContent = '✅  Message sent! I\'ll reply within 24 hours.';
+                    successMsg.classList.add('show');
+                    form.reset();
+                    setTimeout(() => successMsg.classList.remove('show'), 6000);
+                })
+                .catch(function(error) {
+                    // ERROR
+                    submitBtn.classList.remove('loading');
+                    submitBtn.textContent = '✉️  Send Message';
+                    successMsg.style.color = '#f87171';
+                    successMsg.style.borderColor = 'rgba(248,113,113,0.3)';
+                    successMsg.style.background = 'rgba(248,113,113,0.08)';
+                    successMsg.textContent = '❌  Failed to send. Try WhatsApp or email directly.';
+                    successMsg.classList.add('show');
+                    console.error('EmailJS error:', error);
+                });
+        });
+
+        // Clear errors live as user types
+        ['name','email','service','message'].forEach(id => {
+            const el = document.getElementById(id);
+            el.addEventListener('input', () => {
+                el.classList.remove('error');
+                document.getElementById(id + '-error')?.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
