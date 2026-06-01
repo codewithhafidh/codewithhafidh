@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,112 +8,291 @@
     <meta name="description" content="Hafidh Omar is a professional Web Developer specializing in HTML, CSS, JavaScript, responsive web design, website development, maintenance, PC troubleshooting, networking, and security solutions.">
     <meta name="author" content="Hafidh Omar">
     <title>Hafidh | Web Dev Solutions & Design</title>
-     <link rel="icon" type="image/x-icon" href="photo.jpg">
-     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="photo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── NAVBAR FIX ── */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            width: 100%;
+        }
+
+        .navbar {
+            width: 100%;
+            background: #e4e8e9;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 24px;
+            width: 100%;
+            box-sizing: border-box;
+            background: #e4e8e9;
+        }
+
+        /* Logo / brand text (optional – hides if not present) */
+        .nav-brand {
+            font-weight: 700;
+            font-size: 18px;
+            color: #0f172a;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: rgb(22, 21, 21);
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            color: rgb(6, 165, 14);
+        }
+
+        .nav-cta {
+            background: #04458f;
+            padding: 10px 18px;
+            border-radius: 30px;
+            color: white !important;
+        }
+
+        .nav-cta:hover {
+            background: rgb(13, 226, 216) !important;
+            color: rgb(0, 0, 0) !important;
+        }
+
+        /* ── HAMBURGER BUTTON ── */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 26px;
+            height: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background: #0f172a;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hamburger → X animation */
+        .hamburger.open span:nth-child(1) {
+            transform: translateY(8.5px) rotate(45deg);
+        }
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.open span:nth-child(3) {
+            transform: translateY(-8.5px) rotate(-45deg);
+        }
+
+        /* ── MOBILE STYLES ── */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                position: absolute;
+                top: 56px;
+                left: 0;
+                width: 100%;
+                background: #e4e8e9;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                padding: 10px 0;
+                z-index: 998;
+            }
+
+            nav ul.open {
+                display: flex;
+            }
+
+            nav ul li {
+                width: 100%;
+                margin: 0;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 14px 24px;
+                font-size: 16px;
+                border-bottom: 1px solid rgba(0,0,0,0.06);
+            }
+
+            .nav-cta {
+                margin: 10px 24px;
+                border-radius: 30px;
+                text-align: center;
+                display: inline-block;
+                width: auto;
+            }
+
+            /* Hero: stack vertically on mobile */
+            .hero {
+                padding: 40px 5%;
+                min-height: auto;
+            }
+
+            .hero-content {
+                flex-direction: column-reverse;
+                gap: 24px;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-image img {
+                width: 220px;
+                height: 220px;
+            }
+
+            /* About cards: single column */
+            .About {
+                margin: 40px auto;
+                grid-template-columns: 1fr;
+            }
+
+            /* Footer logo: smaller */
+            .logo img {
+                width: 150px !important;
+                height: 150px !important;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <div class="navbar">
             <nav>
-                <ul>
+                <!-- Brand / logo text -->
+                <a href="index.html" class="nav-brand">Hafidh</a>
+
+                <!-- Hamburger button (shows on mobile) -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Nav links -->
+                <ul id="nav-links">
                     <li><a href="index.html"><b>Home</b></a></li>
                     <li><a href="work.html"><b>Portfolio</b></a></li>
-                     <li><a href="contact.html" class="nav-cta"><b>Contact Me</b></a></li>
+                    <li><a href="contact.html" class="nav-cta"><b>Contact Me</b></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <section class="hero">
-    <div class="hero-content">
-        <div class="hero-text">
-            <h1>Hi, I'm Hafidh</h1>
-            <h2>Web Developer & Problem Solver</h2>
-            <p>
-                I create modern, responsive, and user-friendly websites.
-            </p>
-            <a href="work.html" class="btn">View My Work</a>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm Hafidh</h1>
+                <h2>Web Developer & Problem Solver</h2>
+                <p>I create modern, responsive, and user-friendly websites.</p>
+                <a href="work.html" class="btn">View My Work</a>
+            </div>
+            <div class="hero-image">
+                <img src="photo2.jpg" alt="Hafidh">
+            </div>
         </div>
-
-        <div class="hero-image">
-            <img src="photo2.jpg" alt="Hafidh">
-        </div>
-    </div>
-</section>
+    </section>
 
     <section class="About">
         <div class="card">
-           <h2>About Me</h2>
-
-    <p>
-        Hello! I'm Hafidh, a passionate and creative Web Designer dedicated
-        to building modern, responsive, and user-friendly websites.
-    </p>
-
-    <p>
-        I specialize in creating visually appealing designs that help
-        businesses and individuals establish a strong online presence.
-    </p>
-
-    <p>
-        My goal is to transform ideas into professional websites that
-        deliver excellent user experiences across all devices.
-    </p>
-    <img src="photo2.jpg" alt="Developer" width="300" height="300">
+            <h2>About Me</h2>
+            <p>Hello! I'm Hafidh, a passionate and creative Web Designer dedicated to building modern, responsive, and user-friendly websites.</p>
+            <p>I specialize in creating visually appealing designs that help businesses and individuals establish a strong online presence.</p>
+            <p>My goal is to transform ideas into professional websites that deliver excellent user experiences across all devices.</p>
+            <img src="photo2.jpg" alt="Developer" width="300" height="300">
         </div>
         <div class="card">
             <h2>Skills</h2>
-
             <ul>
-               <li>Responsive Web Design</li>
-               <li>HTML5 & CSS3</li>
-               <li>JavaScript</li>
-               <li>UI/UX Design</li>
-               <li>Website Optimization</li>
-               <li>Landing Page Design</li>
+                <li>Responsive Web Design</li>
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript</li>
+                <li>UI/UX Design</li>
+                <li>Website Optimization</li>
+                <li>Landing Page Design</li>
             </ul>
             <img src="photo4.jpg" alt="skills" width="300" height="300">
         </div>
         <div class="card">
             <h2>Project</h2>
-            <p>Click to viw my project</p>
+            <p>Click to view my project</p>
             <a href="work.html" class="btn">View My Work</a>
         </div>
     </section>
 
     <footer>
-    <div class="footer-content">
-        <h3>Hafidh Portfolio</h3>
-
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="work.html">My Work</a>
-            <a href="contact.html">Contact Me</a>
+        <div class="footer-content">
+            <h3>Hafidh Portfolio</h3>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="work.html">My Work</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
+            <div class="logo">
+                <img src="photo.jpg" style="width:180px;height:180px;object-fit:cover;border-radius:50%;border:5px solid #00d4ff;box-shadow:0 0 30px rgba(0,212,255,0.5);">
+            </div>
+            <div class="footer-contact">
+                <p>Email: hafidhomar167@gmail.com</p>
+                <p>Phone: +255 658 502 920</p>
+            </div>
+            <p class="copyright">© 2026 Hafidh. All Rights Reserved.</p>
         </div>
-        <div class="logo">
-            <img src="photo.jpg" style="width:350px;
-    height:350px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid #00d4ff;
-    box-shadow:0 0 30px rgba(0,212,255,0.5);">
-        </div>
+        <a href="https://wa.me/255658502920" class="whatsapp-float" target="_blank">
+            <img src="photo3.png" alt="WhatsApp">
+        </a>
+    </footer>
 
-        <div class="footer-contact">
-            <p>Email: hafidhomar167@gmail.com</p>
-            <p>Phone: +255 658 502 920</p>
-        </div>
+    <!-- Hamburger toggle script -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks  = document.getElementById('nav-links');
 
-        <p class="copyright">
-            © 2026 Hafidh. All Rights Reserved.
-        </p>
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('open');
+        });
 
-    </div>
-    <a href="https://wa.me/255658502920" class="whatsapp-float" target="_blank">
-    <img src="photo3.png" alt="WhatsApp">
-</a>
-</footer>
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navLinks.classList.remove('open');
+            });
+        });
+    </script>
 
 </body>
 </html>
